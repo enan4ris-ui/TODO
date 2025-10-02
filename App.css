@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@plugin "daisyui";
+/* * {
+  margin: 0;
+} */
+.board-comp {
+  width: 377px;
+  height: 290px;
+  top: 140px;
+  left: 532px;
+  border-color: rgb(0, 0, 0);
+  border-radius: 6px;
+  padding-top: 24px;
+  padding-right: 16px;
+  padding-bottom: 24px;
+  padding-left: 16px;
+  gap: 40px;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.16);
+}
+.width {
+  width: 345px;
+}
+.title {
+  height: 28px;
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -2.5%;
+  text-align: center;
+  color: rgb(20, 113, 6);
+}
+.container {
+  height: 187px;
+  gap: 32px;
+}
+.container2 {
+  height: 138px;
+  gap: 20px;
+}
+.inputcontainer {
+  height: 38px;
+  gap: 6px;
+}
+.taskcontainer {
+  width: 280px;
+  height: 40px;
+  border-radius: 6px;
+  border-width: 1px;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  border: 1px solid var(--border-border-border, rgb(206, 239, 198));
+}
+.filtercontainer {
+  height: 32px;
+  gap: 6px;
+}
+.btn {
+  width: 59px;
+  height: 40px;
+  gap: 10px;
+  border-radius: 6px;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  background: rgba(60, 130, 246, 1);
+}
