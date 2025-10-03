@@ -1,5 +1,4 @@
-@import "tailwindcss";
-@plugin "daisyui";
+/* @import "tailwindcss"; */
 /* * {
   margin: 0;
 } */
@@ -67,5 +66,5 @@
   padding-right: 16px;
   padding-bottom: 8px;
   padding-left: 16px;
-  background: rgba(60, 130, 246, 1);
+  background: rgb(42, 122, 24);
 }
