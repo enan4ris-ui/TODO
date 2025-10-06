@@ -34,7 +34,6 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -54,6 +53,9 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+container {
+  color: lightpink;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

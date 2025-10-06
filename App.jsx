@@ -26,7 +26,9 @@ function App() {
   return (
     <div>
       <input value={text} onChange={(e) => setText(e.target.value)} />
-      <button onClick={handleAdd}>add</button>
+      <div style={{ color: "blue" }}>
+        <button onClick={handleAdd}>Add</button>
+      </div>
       <div></div>
       <button onClick={() => setStatus("all")}>All</button>
       <button onClick={() => setStatus("active")}>Active</button>
