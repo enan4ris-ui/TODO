@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Task from "./Task";
+// import Color from "./Color";
 
 function App() {
   const [text, setText] = useState("");
@@ -24,15 +25,47 @@ function App() {
   });
 
   return (
-    <div>
-      <input value={text} onChange={(e) => setText(e.target.value)} />
-      <div style={{ color: "blue" }}>
-        <button onClick={handleAdd}>Add</button>
+    <div
+      className="layout bg-white place-self-center w-11/12 max-w-md flex flex-col p-7 min-h-[550px] rounded-xl"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "column",
+        gap: "4px",
+      }}
+    >
+      <div style={{ display: "flex", gap: "5px" }}>
+        <input value={text} onChange={(e) => setText(e.target.value)} />
+
+        <button
+          style={{ backgroundColor: "black", color: "white" }}
+          onClick={handleAdd}
+        >
+          Add
+        </button>
       </div>
       <div></div>
-      <button onClick={() => setStatus("all")}>All</button>
-      <button onClick={() => setStatus("active")}>Active</button>
-      <button onClick={() => setStatus("completed")}>Completed</button>
+      <div style={{ display: "flex", flexDirection: "row", gap: "3px" }}>
+        <button
+          style={{ backgroundColor: "red", color: "white" }}
+          onClick={() => setStatus("all")}
+        >
+          All
+        </button>
+        <button
+          style={{ backgroundColor: "blue", color: "white" }}
+          onClick={() => setStatus("active")}
+        >
+          Active
+        </button>
+        <button
+          style={{ backgroundColor: "purple", color: "white" }}
+          onClick={() => setStatus("completed")}
+        >
+          Completed
+        </button>
+      </div>
       <div>
         {filteredTodos.map((item, index) => {
           return <Task index={index} item={item} handleToggle={handleToggle} />;
