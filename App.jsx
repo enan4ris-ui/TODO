@@ -17,11 +17,12 @@ function App() {
       todo.text === text ? { ...todo, done: !todo.done } : todo
     );
     setTodos(newTodos);
-  }
+  } 
   const filteredTodos = todos.filter((todo) => {
     if (status === "active") return !todo.done;
     if (status === "completed") return todo.done;
     return true;
+    
   });
 
   return (
@@ -39,37 +40,41 @@ function App() {
         <input value={text} onChange={(e) => setText(e.target.value)} />
 
         <button
-          style={{ backgroundColor: "black", color: "white" }}
+          style={{ backgroundColor: "darkGreen", color: "white" }}
           onClick={handleAdd}
         >
           Add
         </button>
+         
       </div>
       <div></div>
       <div style={{ display: "flex", flexDirection: "row", gap: "3px" }}>
         <button
-          style={{ backgroundColor: "red", color: "white" }}
+          style={{ backgroundColor: "lightGreen", color: "white" }}
           onClick={() => setStatus("all")}
         >
           All
         </button>
         <button
-          style={{ backgroundColor: "blue", color: "white" }}
+          style={{ backgroundColor: "lightYellow", color: "black" }}
           onClick={() => setStatus("active")}
         >
           Active
         </button>
         <button
-          style={{ backgroundColor: "purple", color: "white" }}
+          style={{ backgroundColor: "grey", color: "white" }}
           onClick={() => setStatus("completed")}
         >
           Completed
         </button>
       </div>
       <div>
+        
         {filteredTodos.map((item, index) => {
           return <Task index={index} item={item} handleToggle={handleToggle} />;
+      
         })}
+         
       </div>
     </div>
   );
